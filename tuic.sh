@@ -118,7 +118,7 @@ EOF
 
 # ========== 获取公网IP ==========
 get_server_ip() {
-  curl -s --connect-timeout 3 https://api64.ipify.org || echo "127.0.0.1"
+  echo "${MASQ_DOMAIN}"
 }
 
 # ========== 生成TUIC链接 ==========
@@ -162,3 +162,4 @@ main() {
 }
 
 main "$@"
+
